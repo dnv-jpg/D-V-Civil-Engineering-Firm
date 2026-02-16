@@ -1,8 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My Company - IE492 Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    :root{
+      --blue-900:#0b1f3a;
+      --blue-700:#114a8b;
+      --blue-500:#1d6fd6;
+      --yellow:#f5c400;
+      --bg:#f6f8fc;
+      --text:#0f172a;
+      --muted:#64748b;
+      --card:#ffffff;
+      --border:#e6edf6;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+
+    header{
+      background: linear-gradient(90deg, var(--blue-900), var(--blue-700));
+      border-bottom: 4px solid var(--yellow);
+      position: sticky;
+      top:0;
+      z-index:10;
+    }
+    nav{
+      max-width: 1100px;
+      margin:0 auto;
+      padding: 14px 16px;
+    }
+    nav ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px 14px;
+      align-items:center;
+    }
+    nav a{
+      display:inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size: 14px;
+      opacity: 0.95;
+    }
+    nav a:hover{opacity:1;background: rgba(255,255,255,0.12);}
+
+    main{
+      max-width: 1100px;
+      margin: 22px auto;
+      padding: 0 16px 40px;
+    }
+
+    .hero{
+      background: radial-gradient(1200px 400px at 20% 10%, rgba(245,196,0,0.35), transparent 60%),
+                  linear-gradient(135deg, #ffffff, #eef5ff);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px 22px;
+      box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+      margin-bottom: 18px;
+    }
+    .hero h1{
+      margin:0 0 6px 0;
+      font-size: 44px;
+      letter-spacing: -0.5px;
+      color:var(--blue-900);
+    }
+    .subtitle{
+      margin:0;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+    }
+    .card h2{
+      margin-top:0;
+      color: var(--blue-900);
+    }
+
+    .info-box{
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--yellow);
+      background: #fffdf2;
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin: 14px 0 18px;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:16px;
+    }
+    @media (max-width: 850px){
+      .grid{grid-template-columns: 1fr;}
+      .hero h1{font-size: 34px;}
+    }
+
+    ul{
+      margin: 10px 0 0;
+      padding-left: 18px;
+    }
+    li{margin: 6px 0;}
+
+    footer{
+      max-width:1100px;
+      margin: 18px auto 32px auto;
+      padding: 0 16px;
+      color: var(--muted);
+      text-align:center;
+    }
+  </style>
 </head>
 
 <body>
@@ -23,40 +151,50 @@
   </nav>
 </header>
 
-<section class="hero">
-  <h1>D-V Civil Engineering Firm</h1>
-  <p class="subtitle">Modern Engineering Management | Quality + Project Delivery</p>
-</section>
+<main>
 
-<div class="content">
-  <h2>Company Overview</h2>
-  <p>
-    D-V Civil Engineering Firm is a fictional company created for IE492. The focus is delivering
-    infrastructure and construction projects using modern engineering management principles:
-    scope control, quality management, scheduling, cost tracking, risk management, and continuous improvement.
-  </p>
+  <section class="hero">
+    <h1>D-V Civil Engineering Firm</h1>
+    <p class="subtitle">Modern Engineering Management | Quality + Project Delivery</p>
+  </section>
 
-  <div class="info-box">
-    <p><b>Mission:</b> Deliver safe, high-quality civil projects on time and on budget using modern project and quality management systems.</p>
-    <p><b>Core Focus:</b> Real-world engineering management (visual management, prevention of defects, process improvement, and stakeholder communication).</p>
-  </div>
+  <section class="card">
+    <h2>Company Overview</h2>
+    <p>
+      D-V Civil Engineering Firm is a fictional company created for IE492. The focus is delivering
+      infrastructure and construction projects using modern engineering management principles:
+      scope control, quality management, scheduling, cost tracking, risk management, and continuous improvement.
+    </p>
 
-  <h2>Services</h2>
-  <ul>
-    <li>Project planning & scheduling (milestones, deliverables, tracking)</li>
-    <li>Cost estimating & budget monitoring</li>
-    <li>Quality management (inspection points, defect prevention, lessons learned)</li>
-    <li>Risk & safety management (risk register, mitigation planning)</li>
-    <li>Client communication & documentation systems</li>
-  </ul>
+    <div class="info-box">
+      <p><b>Mission:</b> Deliver safe, high-quality civil projects on time and on budget using modern project and quality management systems.</p>
+      <p><b>Core Focus:</b> Real-world engineering management (visual management, prevention of defects, process improvement, and stakeholder communication).</p>
+    </div>
 
-  <h2>Management Approach</h2>
-  <ul>
-    <li><b>Systems thinking:</b> projects are integrated—people + process + technology</li>
-    <li><b>Visual management:</b> dashboards, progress tracking, and clear reporting</li>
-    <li><b>Continuous improvement:</b> analyze issues, prevent recurrence, improve the process</li>
-  </ul>
-</div>
+    <div class="grid">
+      <div>
+        <h2>Services</h2>
+        <ul>
+          <li>Project planning & scheduling (milestones, deliverables, tracking)</li>
+          <li>Cost estimating & budget monitoring</li>
+          <li>Quality management (inspection points, defect prevention, lessons learned)</li>
+          <li>Risk & safety management (risk register, mitigation planning)</li>
+          <li>Client communication & documentation systems</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2>Management Approach</h2>
+        <ul>
+          <li><b>Systems thinking:</b> projects are integrated—people + process + technology</li>
+          <li><b>Visual management:</b> dashboards, progress tracking, and clear reporting</li>
+          <li><b>Continuous improvement:</b> analyze issues, prevent recurrence, improve the process</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+</main>
 
 <footer>
   <p>© 2026 IE492 Engineering Management Portfolio</p>
