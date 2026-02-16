@@ -118,6 +118,24 @@ body {
   box-shadow: 0 0 0 3px var(--yellow-bg), 0 0 0 5px var(--blue-500);
 }
 
+.nav-wrap .nav-disabled {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.5);
+  border: 2px solid var(--border);
+  cursor: default;
+}
+
+.nav-wrap .nav-disabled.nav-current {
+  color: var(--blue-900);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: var(--blue-800);
+}
+
 /* Main content */
 main {
   max-width: 1100px;
