@@ -186,6 +186,10 @@ main {
   margin-bottom: 0;
 }
 
+.section-spaced {
+  margin-top: 2.5rem;
+}
+
 /* Hero / banner on home */
 .hero {
   background: linear-gradient(135deg, #fff 0%, #eff6ff 40%, #fefce8 100%);
