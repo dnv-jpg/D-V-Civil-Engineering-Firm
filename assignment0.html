@@ -1,124 +1,305 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Assignment 0 - IE492 Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 0 - IE492 Engineering Management Portfolio</title>
+
+  <!-- IE492 Embedded Style (Blue + Yellow) -->
+  <style>
+    :root{
+      --blue-900:#0b1f3a;
+      --blue-700:#114a8b;
+      --blue-500:#1d6fd6;
+      --yellow:#f5c400;
+      --bg:#f6f8fc;
+      --text:#0f172a;
+      --muted:#64748b;
+      --card:#ffffff;
+      --border:#e6edf6;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    header{
+      background: linear-gradient(90deg, var(--blue-900), var(--blue-700));
+      border-bottom: 4px solid var(--yellow);
+      position: sticky;
+      top:0;
+      z-index:10;
+    }
+    nav{
+      max-width: 1100px;
+      margin:0 auto;
+      padding: 14px 16px;
+    }
+    nav ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px 14px;
+      align-items:center;
+    }
+    nav a{
+      display:inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      color:#fff;
+      text-decoration:none;
+      font-weight:700;
+      font-size: 14px;
+      opacity: 0.95;
+    }
+    nav a:hover{opacity:1;background: rgba(255,255,255,0.12);}
+
+    main{max-width: 1100px;margin: 22px auto;padding: 0 16px 40px;}
+    .hero{
+      background: radial-gradient(1200px 400px at 20% 10%, rgba(245,196,0,0.35), transparent 60%),
+                  linear-gradient(135deg, #ffffff, #eef5ff);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 26px 22px;
+      box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+      margin-bottom: 18px;
+    }
+    .hero h1{margin:0 0 6px 0;font-size: 36px;letter-spacing: -0.5px;color:var(--blue-900);}
+    .subtitle{margin:0;color: var(--muted);font-weight: 700;}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+    }
+    @media (max-width: 900px){
+      .grid{grid-template-columns:1fr;}
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
+    }
+    .card h2{margin-top:0;color: var(--blue-900);}
+    .callout{
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--yellow);
+      background: #fffdf2;
+      border-radius: 12px;
+      padding: 12px 14px;
+    }
+    .small{color:var(--muted);font-weight:600;font-size:14px;}
+    .tag{
+      display:inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(29,111,214,0.10);
+      border: 1px solid rgba(29,111,214,0.25);
+      color: var(--blue-900);
+      font-weight: 800;
+      font-size: 12px;
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+    .toc a{color: var(--blue-500);font-weight:800;text-decoration:none;}
+    .toc a:hover{text-decoration:underline;}
+
+    .video{
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+      margin: 12px 0;
+      background: #ffffff;
+    }
+    .video h3{margin:0 0 8px 0;color: var(--blue-900);}
+    .video label{font-weight:800;}
+    .video ul{margin: 8px 0 0 18px;}
+    .video li{margin:6px 0;}
+    .pill{
+      display:inline-block;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(245,196,0,0.25);
+      border: 1px solid rgba(245,196,0,0.6);
+      color: var(--blue-900);
+      font-weight: 900;
+      font-size: 12px;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+
+    .btn{
+      display:inline-block;
+      background: var(--blue-500);
+      color: #fff;
+      text-decoration:none;
+      padding: 10px 14px;
+      border-radius: 10px;
+      font-weight: 900;
+    }
+    .btn:hover{filter:brightness(0.95);}
+
+    footer{
+      max-width:1100px;
+      margin: 18px auto 32px auto;
+      padding: 0 16px;
+      color: var(--muted);
+      text-align:center;
+      font-size: 13px;
+    }
+    code, pre{
+      background:#0b1f3a0d;
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:10px;
+      display:block;
+      overflow:auto;
+    }
+  </style>
 </head>
 
 <body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="company.html">My Company</a></li>
+        <li><a href="assignment0.html">Assignment 0</a></li>
+        <li><a href="assignment1.html">Assignment 1</a></li>
+        <li><a href="assignment2.html">Assignment 2</a></li>
+        <li><a href="assignment3.html">Assignment 3</a></li>
+        <li><a href="assignment4.html">Assignment 4</a></li>
+        <li><a href="assignment5.html">Assignment 5</a></li>
+        <li><a href="assignment6.html">Assignment 6</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<header>
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="company.html">My Company</a></li>
-      <li><a href="assignment0.html">Assignment 0</a></li>
-      <li><a href="assignment1.html">Assignment 1</a></li>
-      <li><a href="assignment2.html">Assignment 2</a></li>
-      <li><a href="assignment3.html">Assignment 3</a></li>
-      <li><a href="assignment4.html">Assignment 4</a></li>
-      <li><a href="assignment5.html">Assignment 5</a></li>
-      <li><a href="assignment6.html">Assignment 6</a></li>
-    </ul>
-  </nav>
-</header>
+  <main>
+    <section class="hero">
+      <h1>Assignment 0: Video Reflections + Company Setup</h1>
+      <p class="subtitle">IE492 Engineering Management (Spring 2026) • Dr. Ranky</p>
+    </section>
 
-<section class="hero">
-  <h1>Assignment 0</h1>
-  <p class="subtitle">Video Reflections + Company Setup (IE492)</p>
-</section>
+    <section class="grid">
+      <div class="card">
+        <h2>Purpose</h2>
+        <p>
+          This assignment documents my review of course videos with an engineering management focus.
+          For each video, I identify the real-world system, the project/quality challenges, and the methods used
+          to improve performance, reliability, and outcomes.
+        </p>
 
-<div class="content">
-  <h2>Purpose</h2>
-  <p>
-    This assignment focuses on reviewing engineering management-focused videos and documenting real-world
-    engineering project management challenges, methods, and solutions. These reflections connect to modern
-    engineering management themes such as quality, systems integration, risk, and continuous improvement.
-  </p>
+        <div class="callout">
+          <p><b>Student:</b> Dayannara Vilcarino</p>
+          <p><b>Company Website Section:</b> <a class="btn" href="company.html">View My Company</a></p>
+          <p class="small">Tip: Write like Ranky wants — real-world challenges → how solved → lessons learned.</p>
+        </div>
 
-  <div class="info-box">
-    <p><b>Student:</b> Dayannara Vilcarino</p>
-    <p><b>Course:</b> IE492 Engineering Management</p>
-    <p><b>Instructor:</b> Dr. Ranky</p>
-  </div>
+        <h2>Key Themes I’m Tracking</h2>
+        <span class="tag">Quality Management</span>
+        <span class="tag">Visual Management</span>
+        <span class="tag">Risk & Safety</span>
+        <span class="tag">Lean / Waste Reduction</span>
+        <span class="tag">Automation & Reliability</span>
+        <span class="tag">Systems Thinking</span>
+      </div>
 
-  <h2>Company Setup</h2>
-  <p>
-    My company concept is documented here:
-    <a href="company.html">D-V Civil Engineering Firm (My Company Page)</a>.
-  </p>
+      <div class="card toc">
+        <h2>Quick Navigation</h2>
+        <p class="small">Jump to each video summary:</p>
+        <ul>
+          <li><a href="#v1">Video 1</a></li>
+          <li><a href="#v2">Video 2</a></li>
+          <li><a href="#v3">Video 3</a></li>
+          <li><a href="#v4">Video 4</a></li>
+          <li><a href="#v5">Video 5</a></li>
+          <li><a href="#v6">Video 6</a></li>
+        </ul>
 
-  <h2>Video Summaries (6 Required)</h2>
-  <p><b>How I’m writing each summary:</b> What I saw → engineering/management challenge → how it was solved → key takeaways (quality + project management).</p>
+        <h2>Technical Illustration</h2>
+        <p class="small">
+          Add a screenshot/diagram you created (process map, workflow, quality checklist, dashboard).
+        </p>
+        <p class="small"><b>How to insert an image:</b></p>
+        <pre>&lt;img src="your-diagram.png" alt="Process Diagram" style="max-width:100%; border-radius:12px;"&gt;</pre>
+      </div>
+    </section>
 
-  <h3>Video 1: (Paste the video title or link)</h3>
-  <ul>
-    <li><b>What the system/process is:</b> …</li>
-    <li><b>Engineering/management challenge:</b> …</li>
-    <li><b>How it was addressed (methods/tools):</b> …</li>
-    <li><b>Quality / project management takeaway:</b> …</li>
-  </ul>
+    <section class="card" style="margin-top:16px;">
+      <h2>Video Summaries (Required 6)</h2>
+      <p class="small">
+        Fill each section using this structure: <b>System → Challenge → Method/Solution → Engineering management takeaway</b>.
+        (You can paste the link/title at the top.)
+      </p>
 
-  <h3>Video 2: </h3>
-  <ul>
-    <li><b>What the system/process is:</b> …</li>
-    <li><b>Engineering/management challenge:</b> …</li>
-    <li><b>How it was addressed (methods/tools):</b> …</li>
-    <li><b>Quality / project management takeaway:</b> …</li>
-  </ul>
+      <div class="video" id="v1">
+        <h3>Video 1 <span class="pill">Paste Link/Title</span></h3>
+        <p><label>System / Process:</label> …</p>
+        <p><label>Main Challenge:</label> …</p>
+        <p><label>How They Solved It (methods/tools):</label> …</p>
+        <p><label>Takeaway (Engineering Management):</label> …</p>
+      </div>
 
-  <h3>Video 3: </h3>
-  <ul>
-    <li><b>What the system/process is:</b> …</li>
-    <li><b>Engineering/management challenge:</b> …</li>
-    <li><b>How it was addressed (methods/tools):</b> …</li>
-    <li><b>Quality / project management takeaway:</b> …</li>
-  </ul>
+      <div class="video" id="v2">
+        <h3>Video 2 <span class="pill">Paste Link/Title</span></h3>
+        <p><label>System / Process:</label> …</p>
+        <p><label>Main Challenge:</label> …</p>
+        <p><label>How They Solved It (methods/tools):</label> …</p>
+        <p><label>Takeaway (Engineering Management):</label> …</p>
+      </div>
 
-  <h3>Video 4: </h3>
-  <ul>
-    <li><b>What the system/process is:</b> …</li>
-    <li><b>Engineering/management challenge:</b> …</li>
-    <li><b>How it was addressed (methods/tools):</b> …</li>
-    <li><b>Quality / project management takeaway:</b> …</li>
-  </ul>
+      <div class="video" id="v3">
+        <h3>Video 3 <span class="pill">Paste Link/Title</span></h3>
+        <p><label>System / Process:</label> …</p>
+        <p><label>Main Challenge:</label> …</p>
+        <p><label>How They Solved It (methods/tools):</label> …</p>
+        <p><label>Takeaway (Engineering Management):</label> …</p>
+      </div>
 
-  <h3>Video 5: </h3>
-  <ul>
-    <li><b>What the system/process is:</b> …</li>
-    <li><b>Engineering/management challenge:</b> …</li>
-    <li><b>How it was addressed (methods/tools):</b> …</li>
-    <li><b>Quality / project management takeaway:</b> …</li>
-  </ul>
+      <div class="video" id="v4">
+        <h3>Video 4 <span class="pill">Paste Link/Title</span></h3>
+        <p><label>System / Process:</label> …</p>
+        <p><label>Main Challenge:</label> …</p>
+        <p><label>How They Solved It (methods/tools):</label> …</p>
+        <p><label>Takeaway (Engineering Management):</label> …</p>
+      </div>
 
-  <h3>Video 6: </h3>
-  <ul>
-    <li><b>What the system/process is:</b> …</li>
-    <li><b>Engineering/management challenge:</b> …</li>
-    <li><b>How it was addressed (methods/tools):</b> …</li>
-    <li><b>Quality / project management takeaway:</b> …</li>
-  </ul>
+      <div class="video" id="v5">
+        <h3>Video 5 <span class="pill">Paste Link/Title</span></h3>
+        <p><label>System / Process:</label> …</p>
+        <p><label>Main Challenge:</label> …</p>
+        <p><label>How They Solved It (methods/tools):</label> …</p>
+        <p><label>Takeaway (Engineering Management):</label> …</p>
+      </div>
 
-  <h2>Technical Illustration (Required)</h2>
-  <p>
-    Add a screenshot/diagram you made (workflow, process map, or system overview). Upload the image to GitHub and insert it like this:
-  </p>
+      <div class="video" id="v6">
+        <h3>Video 6 <span class="pill">Paste Link/Title</span></h3>
+        <p><label>System / Process:</label> …</p>
+        <p><label>Main Challenge:</label> …</p>
+        <p><label>How They Solved It (methods/tools):</label> …</p>
+        <p><label>Takeaway (Engineering Management):</label> …</p>
+      </div>
 
-  <pre>
-&lt;img src="your-image-file.png" alt="Process Diagram" style="max-width:100%; border-radius:10px;"&gt;
-  </pre>
+      <h2>References</h2>
+      <ul>
+        <li>Ranky Multimedia Library (course server links)</li>
+        <li>Kerzner Project Management (Ch. 1–3)</li>
+        <li>Ranky eBook (course link)</li>
+      </ul>
+    </section>
+  </main>
 
-  <h2>References</h2>
-  <ul>
-    <li>Ranky multimedia library videos (course links)</li>
-    <li>Kerzner PM book (Ch. 1–3)</li>
-    <li>Ranky eBook (course link)</li>
-  </ul>
-</div>
-
-<footer>
-  <p>© 2026 IE492 Engineering Management Portfolio</p>
-</footer>
-
+  <footer>
+    <p>© 2026 IE492 Engineering Management Portfolio</p>
+  </footer>
 </body>
 </html>
