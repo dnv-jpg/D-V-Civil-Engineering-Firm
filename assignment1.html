@@ -2,7 +2,93 @@
 <html>
 <head>
 <title>Assignment 1</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+:root{
+  --blue-dark:#0b1f3a;
+  --blue:#1d6fd6;
+  --yellow:#f5c400;
+  --bg:#f4f7fc;
+  --text:#0f172a;
+  --card:#ffffff;
+  --border:#e6edf6;
+}
+
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+/* ---------- NAVBAR ---------- */
+header{
+  background:linear-gradient(90deg,var(--blue-dark),var(--blue));
+  border-bottom:4px solid var(--yellow);
+}
+
+nav ul{
+  margin:0;
+  padding:14px;
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  gap:14px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* ---------- HERO HEADER ---------- */
+.hero{
+  padding:40px 20px;
+  background:linear-gradient(135deg,#ffffff,#eef4ff);
+  border-bottom:1px solid var(--border);
+}
+
+.hero h1{
+  margin:0;
+  font-size:40px;
+  color:var(--blue-dark);
+}
+
+.subtitle{
+  color:var(--yellow);
+  font-weight:bold;
+}
+
+/* ---------- CONTENT CARD ---------- */
+.coming{
+  max-width:900px;
+  margin:30px auto;
+  background:var(--card);
+  padding:30px;
+  border-radius:14px;
+  text-align:center;
+  border:1px solid var(--border);
+}
+
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 16px;
+  background:var(--blue);
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+}
+
+/* ---------- FOOTER ---------- */
+footer{
+  text-align:center;
+  padding:20px;
+  color:#64748b;
+}
+</style>
+
 </head>
 
 <body>
@@ -28,8 +114,8 @@
 <p class="subtitle">Coming Soon</p>
 </section>
 
-<div class="content coming">
-<h1>Coming Soon! ⏳</h1>
+<div class="coming">
+<h2>Coming Soon! ⏳</h2>
 <p>This page will be updated with my IE492 assignment work.</p>
 <a class="btn" href="index.html">Back to Home</a>
 </div>
