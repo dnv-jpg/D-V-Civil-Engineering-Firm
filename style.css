@@ -1,0 +1,445 @@
+/* IE492 Engineering Management Portfolio — Dayannara Vilcarino
+   Blue & yellow gradient theme, card-based layout */
+
+:root {
+  --blue-900: #0b1f3a;
+  --blue-800: #132a4f;
+  --blue-700: #1a4d8c;
+  --blue-500: #2563eb;
+  --blue-100: #dbeafe;
+  --yellow: #eab308;
+  --yellow-light: #fef08a;
+  --yellow-bg: rgba(234, 179, 8, 0.12);
+
+  --bg: #f0f4fc;
+  --bg-gradient: linear-gradient(160deg, #eef6ff 0%, #f5f0e8 50%, #fefce8 100%);
+  --text: #0f172a;
+  --muted: #64748b;
+
+  --card: #ffffff;
+  --border: #e2e8f0;
+  --shadow: 0 4px 20px rgba(11, 31, 58, 0.08);
+  --shadow-card: 0 8px 28px rgba(11, 31, 58, 0.06);
+  --radius: 16px;
+  --radius-sm: 12px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  background: var(--bg-gradient);
+  min-height: 100vh;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header: company name + tagline (gradient bar) */
+.site-header {
+  background: linear-gradient(135deg, var(--blue-900) 0%, var(--blue-700) 50%, #1e3a5f 100%);
+  padding: 20px 24px 18px;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 3px solid var(--yellow);
+  box-shadow: 0 4px 16px rgba(11, 31, 58, 0.2);
+}
+
+.site-header .brand {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-header h1 {
+  margin: 0 0 4px 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: -0.02em;
+}
+
+.site-header .tagline {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Nav: rounded buttons, active = filled */
+.nav-wrap {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 24px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 14px;
+}
+
+.nav-wrap ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 12px;
+  align-items: center;
+}
+
+.nav-wrap a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  color: var(--blue-900);
+  background: #fff;
+  border: 2px solid var(--blue-800);
+  transition: background 0.15s ease, color 0.15s ease, transform 0.08s ease;
+}
+
+.nav-wrap a:hover {
+  background: var(--blue-100);
+  color: var(--blue-900);
+}
+
+.nav-wrap a.active {
+  background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+  color: #fff;
+  border-color: var(--blue-700);
+}
+
+.nav-wrap a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--yellow-bg), 0 0 0 5px var(--blue-500);
+}
+
+/* Main content */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 28px 24px 48px;
+}
+
+/* Section heading with vertical accent bar */
+.section-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px 0;
+}
+
+.section-head .bar {
+  width: 5px;
+  height: 28px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, var(--blue-700), var(--blue-900));
+}
+
+.section-head h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  letter-spacing: -0.02em;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 20px;
+}
+
+.card p {
+  margin: 0 0 12px 0;
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.card p:last-child {
+  margin-bottom: 0;
+}
+
+/* Hero / banner on home */
+.hero {
+  background: linear-gradient(135deg, #fff 0%, #eff6ff 40%, #fefce8 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-card);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.hero h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--blue-900);
+  letter-spacing: -0.03em;
+}
+
+.hero .subtitle {
+  margin: 0;
+  font-weight: 600;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* Service/feature grid (2x2) */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow-card);
+}
+
+.service-card h3 {
+  margin: 0 0 12px 0;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--blue-900);
+}
+
+.service-card ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.service-card li {
+  margin: 6px 0;
+}
+
+.service-card li::marker {
+  color: var(--blue-500);
+}
+
+/* Info box (student/course) */
+.info-box {
+  margin-top: 16px;
+  padding: 18px 20px;
+  border-radius: var(--radius-sm);
+  background: var(--yellow-bg);
+  border: 1px solid rgba(234, 179, 8, 0.35);
+}
+
+.info-box p {
+  margin: 6px 0;
+  font-weight: 650;
+}
+
+/* Link grid for quick nav */
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+
+@media (max-width: 600px) {
+  .link-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.link-grid a {
+  display: block;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--blue-900);
+  box-shadow: 0 4px 12px rgba(11, 31, 58, 0.05);
+  transition: transform 0.08s ease, box-shadow 0.15s ease;
+}
+
+.link-grid a:hover {
+  box-shadow: 0 8px 20px rgba(11, 31, 58, 0.08);
+}
+
+.link-grid a:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--yellow);
+}
+
+/* Footer */
+footer {
+  max-width: 1100px;
+  margin: 20px auto 32px;
+  padding: 0 24px;
+  color: var(--muted);
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Utility */
+.small {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.course-banner {
+  text-align: center;
+  font-weight: 800;
+  color: var(--blue-800);
+  margin: 0 0 16px 0;
+  letter-spacing: 0.02em;
+}
+
+/* Assignment pages: grid, callout, tags, toc, video blocks, pill, btn */
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 16px;
+}
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.callout {
+  border: 1px solid var(--border);
+  border-left: 6px solid var(--yellow);
+  background: #fefce8;
+  border-radius: var(--radius-sm);
+  padding: 14px 16px;
+  margin: 12px 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.1);
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  color: var(--blue-900);
+  font-weight: 700;
+  font-size: 0.75rem;
+  margin-right: 8px;
+  margin-bottom: 8px;
+}
+
+.toc a {
+  color: var(--blue-500);
+  font-weight: 700;
+  text-decoration: none;
+}
+.toc a:hover {
+  text-decoration: underline;
+}
+
+.video {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin: 14px 0;
+  background: var(--card);
+  box-shadow: var(--shadow-card);
+}
+.video h3 {
+  margin: 0 0 10px 0;
+  color: var(--blue-900);
+  font-size: 1.1rem;
+}
+.video label {
+  font-weight: 700;
+}
+.video ul {
+  margin: 8px 0 0 18px;
+}
+.video li {
+  margin: 6px 0;
+}
+
+.pill {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--yellow-bg);
+  border: 1px solid rgba(234, 179, 8, 0.5);
+  color: var(--blue-900);
+  font-weight: 700;
+  font-size: 0.7rem;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--blue-700), var(--blue-500));
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: filter 0.15s ease;
+}
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--blue-900);
+}
+.card h2:not(:first-child) {
+  margin-top: 20px;
+}
+
+code, pre {
+  background: rgba(11, 31, 58, 0.06);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  display: block;
+  overflow: auto;
+  font-size: 0.9rem;
+}
+
+.coming {
+  max-width: 900px;
+  margin: 24px auto;
+  background: var(--card);
+  padding: 32px;
+  border-radius: var(--radius);
+  text-align: center;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+}
+.coming h2 {
+  margin: 0 0 12px 0;
+  color: var(--blue-900);
+}
+.coming p {
+  margin: 0 0 16px 0;
+  color: var(--text);
+}

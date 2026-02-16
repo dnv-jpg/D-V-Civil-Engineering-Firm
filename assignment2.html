@@ -3,162 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Assignment 2 - IE492 Portfolio</title>
-
-  <style>
-    :root{
-      --blue-900:#0b1f3a;
-      --blue-700:#114a8b;
-      --yellow:#f5c400;
-      --bg:#f6f8fc;
-      --text:#0f172a;
-      --muted:#64748b;
-      --card:#ffffff;
-      --border:#e6edf6;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.55;
-    }
-
-    header{
-      background: linear-gradient(90deg, var(--blue-900), var(--blue-700));
-      border-bottom: 4px solid var(--yellow);
-      position: sticky;
-      top:0;
-      z-index:10;
-    }
-    nav{
-      max-width: 1100px;
-      margin:0 auto;
-      padding: 14px 16px;
-    }
-    nav ul{
-      margin:0;
-      padding:0;
-      list-style:none;
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px 14px;
-      align-items:center;
-    }
-    nav a{
-      display:inline-block;
-      padding: 8px 12px;
-      border-radius: 999px;
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      font-size: 14px;
-      opacity: 0.95;
-    }
-    nav a:hover{opacity:1;background: rgba(255,255,255,0.12);}
-
-    main{
-      max-width: 1100px;
-      margin: 22px auto;
-      padding: 0 16px 40px;
-    }
-
-    .hero{
-      background: radial-gradient(1200px 400px at 20% 10%, rgba(245,196,0,0.35), transparent 60%),
-                  linear-gradient(135deg, #ffffff, #eef5ff);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 26px 22px;
-      box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
-      margin-bottom: 18px;
-    }
-    .hero h1{
-      margin:0 0 6px 0;
-      font-size: 44px;
-      letter-spacing: -0.5px;
-      color:var(--blue-900);
-    }
-    .subtitle{
-      margin:0;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
-    .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 26px;
-      box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
-      text-align:center;
-    }
-    .card h2{margin: 0 0 6px 0;color: var(--blue-900);font-size: 34px;}
-    .card p{margin: 0 0 16px 0;color: var(--muted);font-weight:600;}
-
-    .btn{
-      display:inline-block;
-      background: var(--blue-700);
-      color:#fff;
-      text-decoration:none;
-      font-weight:800;
-      padding: 10px 16px;
-      border-radius: 12px;
-      border: 2px solid rgba(255,255,255,0.0);
-    }
-    .btn:hover{filter: brightness(1.05);}
-
-    footer{
-      max-width:1100px;
-      margin: 18px auto 32px auto;
-      padding: 0 16px;
-      color: var(--muted);
-      text-align:center;
-    }
-
-    @media (max-width: 850px){
-      .hero h1{font-size: 34px;}
-      .card h2{font-size: 28px;}
-    }
-  </style>
+  <title>HW2 - IE492 Engineering Management | Dayannara Vilcarino</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header>
-  <nav>
+<header class="site-header">
+  <div class="brand">
+    <h1>D & V Civil Engineering Management</h1>
+    <p class="tagline">Modern Engineering Project Management & Sustainable Infrastructure — Dayannara Vilcarino</p>
+  </div>
+  <nav class="nav-wrap">
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="company.html">My Company</a></li>
-      <li><a href="assignment0.html">Assignment 0</a></li>
-      <li><a href="assignment1.html">Assignment 1</a></li>
-      <li><a href="assignment2.html">Assignment 2</a></li>
-      <li><a href="assignment3.html">Assignment 3</a></li>
-      <li><a href="assignment4.html">Assignment 4</a></li>
-      <li><a href="assignment5.html">Assignment 5</a></li>
-      <li><a href="assignment6.html">Assignment 6</a></li>
+      <li><a href="index.html">Home Page</a></li>
+      <li><a href="company.html">Company</a></li>
+      <li><a href="assignment0.html">HW0</a></li>
+      <li><a href="assignment1.html">HW1</a></li>
+      <li><a class="active" href="assignment2.html">HW2</a></li>
+      <li><a href="assignment3.html">HW3</a></li>
+      <li><a href="assignment4.html">HW4</a></li>
+      <li><a href="assignment5.html">HW5</a></li>
+      <li><a href="assignment6.html">HW6</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-
   <section class="hero">
-    <h1>Assignment 2</h1>
+    <h1>HW2</h1>
     <p class="subtitle">Coming Soon</p>
   </section>
 
   <section class="card">
     <h2>Coming Soon! ⏳</h2>
     <p>This page will be updated with my IE492 assignment work.</p>
-    <a class="btn" href="index.html">Back to Home</a>
+    <a class="btn" href="index.html">Back to Home Page</a>
   </section>
-
 </main>
 
 <footer>
-  <p>© 2026 IE492 Engineering Management Portfolio</p>
+  <p>© 2026 IE492 Engineering Management Portfolio — Dayannara Vilcarino</p>
 </footer>
-
 </body>
 </html>

@@ -6,9 +6,8 @@ This is a professional portfolio website for **IE492: Engineering Management** c
 ## Contents
 - **index.html** - Home page with course introduction and navigation
 - **company.html** - Fictional engineering company description and management approach
-- **assignment0.html** - Assignment 0: Foundational management concepts
-- **assignment1.html** - Assignment 1: Strategic management challenges
-- **assignment2.html** - Assignment 2: Advanced reflections and case studies
+- **assignment0.html** – HW0: Video reflections and company setup
+- **assignment1.html** – HW1 through **assignment6.html** – HW6: Assignments per syllabus
 - **style.css** - Professional styling for the entire website
 - **README.md** - This file
 
@@ -29,7 +28,7 @@ This is a professional portfolio website for **IE492: Engineering Management** c
 
 1. **Edit HTML files** to add your assignment content, reflections, and company information
 2. **Replace placeholders** with your actual content:
-   - Student name: `dnv-jpgmake`
+   - Student name: **Dayannara Vilcarino**
    - Company name and details
    - Assignment specifics and reflections
    - Submission dates and status

@@ -3,266 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>IE492 Engineering Management Portfolio</title>
-
-  <style>
-    :root{
-      --blue-900:#0b1f3a;
-      --blue-800:#132a4f;
-      --blue-700:#1d6fd6;
-      --yellow:#f5c400;
-
-      --bg:#f4f7fc;
-      --text:#0f172a;
-      --muted:#64748b;
-
-      --card:#ffffff;
-      --border:#e6edf6;
-
-      --shadow:0 10px 28px rgba(2,6,23,.08);
-      --radius:18px;
-    }
-
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.6;
-    }
-
-    header{
-      background:linear-gradient(90deg,var(--blue-900), #244f97);
-      border-bottom:4px solid var(--yellow);
-      position:sticky;
-      top:0;
-      z-index:999;
-    }
-
-    nav{
-      max-width:1200px;
-      margin:0 auto;
-      padding:14px 16px;
-    }
-
-    nav ul{
-      margin:0;
-      padding:0;
-      list-style:none;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      gap:12px;
-      flex-wrap:nowrap;
-      overflow-x:auto;
-      -webkit-overflow-scrolling:touch;
-      scrollbar-width:none;
-    }
-    nav ul::-webkit-scrollbar{display:none;}
-    nav li{flex:0 0 auto;}
-
-    nav a{
-      display:inline-block;
-      padding:10px 16px;
-      border-radius:999px;
-      text-decoration:none;
-      white-space:nowrap;
-      font-weight:800;
-      font-size:15px;
-      letter-spacing:.2px;
-      color:#fff;
-      background:rgba(255,255,255,.10);
-      border:1px solid rgba(255,255,255,.16);
-      transition:transform .08s ease, background .15s ease, opacity .15s ease;
-    }
-    nav a:hover{background:rgba(255,255,255,.16);}
-    nav a:active{transform:translateY(1px); background:rgba(255,255,255,.20);}
-    nav a:focus, nav a:focus-visible{
-      outline:none;
-      box-shadow:0 0 0 3px rgba(245,196,0,.45);
-    }
-    nav a.active{
-      background:rgba(255,255,255,.22);
-      border:1px solid rgba(255,255,255,.26);
-    }
-
-    main{
-      max-width:1100px;
-      margin:22px auto;
-      padding:0 16px 48px;
-    }
-
-    .course-banner{
-      text-align:center;
-      font-weight:900;
-      color:var(--blue-800);
-      margin:10px 0 14px;
-      letter-spacing:.2px;
-    }
-
-    .hero{
-      background:
-        radial-gradient(1100px 420px at 50% 0%, rgba(245,196,0,.25), transparent 60%),
-        linear-gradient(135deg, #ffffff, #eef4ff);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:34px 24px;
-      box-shadow:var(--shadow);
-      margin-bottom:18px;
-      text-align:center;
-    }
-
-    .hero h1{
-      margin:0 0 10px 0;
-      font-size:46px;
-      letter-spacing:-.6px;
-      color:var(--blue-900);
-    }
-
-    .subtitle{
-      margin:0;
-      color:var(--muted);
-      font-weight:700;
-      font-size:16px;
-    }
-
-    .card{
-      background:var(--card);
-      border:1px solid var(--border);
-      border-radius:var(--radius);
-      padding:26px;
-      box-shadow:var(--shadow);
-    }
-
-    .section-title{
-      margin:0 0 10px 0;
-      font-size:26px;
-      color:var(--blue-900);
-      letter-spacing:-.3px;
-    }
-
-    .card p{
-      margin:0 0 14px 0;
-      color:var(--text);
-      font-size:16px;
-    }
-
-    .info-box{
-      margin-top:14px;
-      padding:16px 18px;
-      border-radius:14px;
-      background:rgba(245,196,0,.16);
-      border:1px solid rgba(245,196,0,.35);
-    }
-    .info-box p{
-      margin:8px 0;
-      font-weight:650;
-    }
-
-    .link-grid{
-      display:grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap:12px;
-      margin-top:12px;
-    }
-    .link-grid a{
-      display:block;
-      text-decoration:none;
-      font-weight:850;
-      padding:14px 14px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      background:#fff;
-      color:var(--blue-900);
-      box-shadow:0 8px 18px rgba(2,6,23,.05);
-      transition:transform .08s ease, filter .12s ease;
-    }
-    .link-grid a:hover{filter:brightness(1.02);}
-    .link-grid a:active{transform:translateY(1px);}
-    .link-grid a:focus, .link-grid a:focus-visible{
-      outline:none;
-      box-shadow:0 0 0 3px rgba(245,196,0,.45);
-    }
-
-    footer{
-      max-width:1100px;
-      margin:18px auto 34px auto;
-      padding:0 16px;
-      color:var(--muted);
-      text-align:center;
-      font-weight:650;
-    }
-
-    @media (max-width:850px){
-      .hero h1{font-size:34px;}
-      nav a{font-size:14px;padding:9px 14px;}
-      .link-grid{grid-template-columns:1fr;}
-    }
-  </style>
+  <title>Company — D & V Civil | IE492 — Dayannara Vilcarino</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header>
-  <nav>
+<header class="site-header">
+  <div class="brand">
+    <h1>D & V Civil Engineering Management</h1>
+    <p class="tagline">Modern Engineering Project Management & Sustainable Infrastructure — Dayannara Vilcarino</p>
+  </div>
+  <nav class="nav-wrap">
     <ul>
-      <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="company.html">My Company</a></li>
-      <li><a href="assignment0.html">Assignment 0</a></li>
-      <li><a href="assignment1.html">Assignment 1</a></li>
-      <li><a href="assignment2.html">Assignment 2</a></li>
-      <li><a href="assignment3.html">Assignment 3</a></li>
-      <li><a href="assignment4.html">Assignment 4</a></li>
-      <li><a href="assignment5.html">Assignment 5</a></li>
-      <li><a href="assignment6.html">Assignment 6</a></li>
+      <li><a href="index.html">Home Page</a></li>
+      <li><a class="active" href="company.html">Company</a></li>
+      <li><a href="assignment0.html">HW0</a></li>
+      <li><a href="assignment1.html">HW1</a></li>
+      <li><a href="assignment2.html">HW2</a></li>
+      <li><a href="assignment3.html">HW3</a></li>
+      <li><a href="assignment4.html">HW4</a></li>
+      <li><a href="assignment5.html">HW5</a></li>
+      <li><a href="assignment6.html">HW6</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-
-  <div class="course-banner">IE492 Engineering Management | Spring 2026</div>
-
   <section class="hero">
-    <h1>Design a better engineering portfolio.</h1>
-    <p class="subtitle">A professional showcase of my work and reflections</p>
+    <h1>D & V Civil Engineering</h1>
+    <p class="subtitle">Fictional firm for IE492 — Engineering management approach and company structure</p>
   </section>
 
   <section class="card">
-    <h2 class="section-title">Welcome</h2>
-    <p>
-      This website documents my work for IE492 Engineering Management under Dr. Ranky.
-      It showcases my fictional engineering firm, project reflections, and assignments.
-    </p>
-
-    <div class="info-box">
-      <p><b>Student:</b> Dayannara Vilcarino</p>
-      <p><b>Course:</b> IE492 Engineering Management</p>
-      <p><b>Instructor:</b> Dr. Ranky</p>
+    <div class="section-head">
+      <span class="bar"></span>
+      <h2>Who We Are</h2>
     </div>
-
-    <h2 class="section-title" style="margin-top:18px;">Quick Links</h2>
-    <p style="color:var(--muted); font-weight:650; margin-top:-4px;">
-      Use the menu above or click a section below.
+    <p>
+      <strong>D & V Civil Engineering</strong> is my fictional engineering management firm for this course, led by <strong>Dayannara Vilcarino</strong>. 
+      The company focuses on modern project management practices: stakeholder integration, risk and schedule control, 
+      quality management, and sustainable infrastructure planning. Our approach aligns with the IE492 syllabus and 
+      real-world engineering management principles from the course resources (Kerzner, Ranky videos, and multimedia library).
     </p>
-
-    <div class="link-grid">
-      <a href="company.html">My Company</a>
-      <a href="assignment0.html">Assignment 0</a>
-      <a href="assignment1.html">Assignment 1</a>
-      <a href="assignment2.html">Assignment 2</a>
-      <a href="assignment3.html">Assignment 3</a>
-      <a href="assignment4.html">Assignment 4</a>
-      <a href="assignment5.html">Assignment 5</a>
-      <a href="assignment6.html">Assignment 6</a>
+    <div class="info-box">
+      <p><b>Student / Owner:</b> Dayannara Vilcarino</p>
+      <p><b>Course:</b> IE492 Engineering Management (Spring 2026)</p>
+      <p><b>Instructor:</b> Dr. Ranky</p>
     </div>
   </section>
 
+  <section>
+    <div class="section-head">
+      <span class="bar"></span>
+      <h2>Our Services</h2>
+    </div>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Stakeholder & Team Integration</h3>
+        <ul>
+          <li>Project office and team organization</li>
+          <li>Change management and project closeout</li>
+          <li>Best-practice teamwork and collaboration</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Regulatory & Compliance</h3>
+        <ul>
+          <li>Contract management and compliance</li>
+          <li>Quality systems and certification (e.g., ISO 9001)</li>
+          <li>Documentation and reporting</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Risk, Cost & Schedule</h3>
+        <ul>
+          <li>Earned value and cost control</li>
+          <li>PERT, CPM, network scheduling</li>
+          <li>Pricing and estimating</li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Analysis & Modern Methods</h3>
+        <ul>
+          <li>Flow charts, fishbone, root cause analysis</li>
+          <li>Visual factory, QFD, trade-off analysis</li>
+          <li>AI, cybersecurity, innovation in PM</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="section-head">
+      <span class="bar"></span>
+      <h2>Management Approach</h2>
+    </div>
+    <p>
+      We apply integrated, real-world engineering management: no isolated systems, clear project lifecycles, 
+      and emphasis on avoiding project failures through best practices in staffing, change management, closeout, 
+      and documentation. Our methods are informed by the course videos, Kerzner PM text, and the Ranky multimedia resources.
+    </p>
+    <p class="small" style="margin-top:12px;">
+      <a href="index.html">Back to Home Page</a> · <a href="assignment0.html">HW0</a> · <a href="assignment1.html">HW1</a>
+    </p>
+  </section>
 </main>
 
 <footer>
-  <p>© 2026 IE492 Engineering Management Portfolio</p>
+  <p>© 2026 IE492 Engineering Management Portfolio — Dayannara Vilcarino</p>
 </footer>
 
 </body>

@@ -3,182 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Assignment 0 - IE492 Engineering Management Portfolio</title>
-
-  <!-- IE492 Embedded Style (Blue + Yellow) -->
-  <style>
-    :root{
-      --blue-900:#0b1f3a;
-      --blue-700:#114a8b;
-      --blue-500:#1d6fd6;
-      --yellow:#f5c400;
-      --bg:#f6f8fc;
-      --text:#0f172a;
-      --muted:#64748b;
-      --card:#ffffff;
-      --border:#e6edf6;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.55;
-    }
-    header{
-      background: linear-gradient(90deg, var(--blue-900), var(--blue-700));
-      border-bottom: 4px solid var(--yellow);
-      position: sticky;
-      top:0;
-      z-index:10;
-    }
-    nav{
-      max-width: 1100px;
-      margin:0 auto;
-      padding: 14px 16px;
-    }
-    nav ul{
-      margin:0;
-      padding:0;
-      list-style:none;
-      display:flex;
-      flex-wrap:wrap;
-      gap: 10px 14px;
-      align-items:center;
-    }
-    nav a{
-      display:inline-block;
-      padding: 8px 12px;
-      border-radius: 999px;
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      font-size: 14px;
-      opacity: 0.95;
-    }
-    nav a:hover{opacity:1;background: rgba(255,255,255,0.12);}
-
-    main{max-width: 1100px;margin: 22px auto;padding: 0 16px 40px;}
-    .hero{
-      background: radial-gradient(1200px 400px at 20% 10%, rgba(245,196,0,0.35), transparent 60%),
-                  linear-gradient(135deg, #ffffff, #eef5ff);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 26px 22px;
-      box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
-      margin-bottom: 18px;
-    }
-    .hero h1{margin:0 0 6px 0;font-size: 36px;letter-spacing: -0.5px;color:var(--blue-900);}
-    .subtitle{margin:0;color: var(--muted);font-weight: 700;}
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 16px;
-    }
-    @media (max-width: 900px){
-      .grid{grid-template-columns:1fr;}
-    }
-
-    .card{
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 22px;
-      box-shadow: 0 8px 24px rgba(2, 6, 23, 0.06);
-    }
-    .card h2{margin-top:0;color: var(--blue-900);}
-    .callout{
-      border: 1px solid var(--border);
-      border-left: 6px solid var(--yellow);
-      background: #fffdf2;
-      border-radius: 12px;
-      padding: 12px 14px;
-    }
-    .small{color:var(--muted);font-weight:600;font-size:14px;}
-    .tag{
-      display:inline-block;
-      padding: 6px 10px;
-      border-radius: 999px;
-      background: rgba(29,111,214,0.10);
-      border: 1px solid rgba(29,111,214,0.25);
-      color: var(--blue-900);
-      font-weight: 800;
-      font-size: 12px;
-      margin-right: 8px;
-      margin-bottom: 8px;
-    }
-    .toc a{color: var(--blue-500);font-weight:800;text-decoration:none;}
-    .toc a:hover{text-decoration:underline;}
-
-    .video{
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 16px;
-      margin: 12px 0;
-      background: #ffffff;
-    }
-    .video h3{margin:0 0 8px 0;color: var(--blue-900);}
-    .video label{font-weight:800;}
-    .video ul{margin: 8px 0 0 18px;}
-    .video li{margin:6px 0;}
-    .pill{
-      display:inline-block;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: rgba(245,196,0,0.25);
-      border: 1px solid rgba(245,196,0,0.6);
-      color: var(--blue-900);
-      font-weight: 900;
-      font-size: 12px;
-      vertical-align: middle;
-      margin-left: 6px;
-    }
-
-    .btn{
-      display:inline-block;
-      background: var(--blue-500);
-      color: #fff;
-      text-decoration:none;
-      padding: 10px 14px;
-      border-radius: 10px;
-      font-weight: 900;
-    }
-    .btn:hover{filter:brightness(0.95);}
-
-    footer{
-      max-width:1100px;
-      margin: 18px auto 32px auto;
-      padding: 0 16px;
-      color: var(--muted);
-      text-align:center;
-      font-size: 13px;
-    }
-    code, pre{
-      background:#0b1f3a0d;
-      border:1px solid var(--border);
-      border-radius:10px;
-      padding:10px;
-      display:block;
-      overflow:auto;
-    }
-  </style>
+  <title>HW0 - IE492 Engineering Management | Dayannara Vilcarino</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <header>
-    <nav>
+  <header class="site-header">
+    <div class="brand">
+      <h1>D & V Civil Engineering Management</h1>
+      <p class="tagline">Modern Engineering Project Management & Sustainable Infrastructure — Dayannara Vilcarino</p>
+    </div>
+    <nav class="nav-wrap">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="company.html">My Company</a></li>
-        <li><a href="assignment0.html">Assignment 0</a></li>
-        <li><a href="assignment1.html">Assignment 1</a></li>
-        <li><a href="assignment2.html">Assignment 2</a></li>
-        <li><a href="assignment3.html">Assignment 3</a></li>
-        <li><a href="assignment4.html">Assignment 4</a></li>
-        <li><a href="assignment5.html">Assignment 5</a></li>
-        <li><a href="assignment6.html">Assignment 6</a></li>
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="company.html">Company</a></li>
+        <li><a class="active" href="assignment0.html">HW0</a></li>
+        <li><a href="assignment1.html">HW1</a></li>
+        <li><a href="assignment2.html">HW2</a></li>
+        <li><a href="assignment3.html">HW3</a></li>
+        <li><a href="assignment4.html">HW4</a></li>
+        <li><a href="assignment5.html">HW5</a></li>
+        <li><a href="assignment6.html">HW6</a></li>
       </ul>
     </nav>
   </header>
@@ -299,7 +143,7 @@
   </main>
 
   <footer>
-    <p>© 2026 IE492 Engineering Management Portfolio</p>
+    <p>© 2026 IE492 Engineering Management Portfolio — Dayannara Vilcarino</p>
   </footer>
 </body>
 </html>
